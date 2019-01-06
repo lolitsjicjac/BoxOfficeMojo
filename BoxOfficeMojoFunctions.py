@@ -85,3 +85,13 @@ def google_search_new_movies(df_col, search_after_word = None):
         if "https://www.boxofficemojo.com/movies/?id=" in link:
             real_links.append(link)
     return real_links
+
+def boxofficemojo_new_movies(a_list):
+    """
+    Use this function for completely new movies or if you are starting fresh without a old links saved.
+    If you have old links use the standard boxofficemojo function.
+    """
+    domestic_price_list = []
+    for link in a_list:
+        domestic_price_list.append(domesticboxoffice(link))
+    return domestic_price_lis
